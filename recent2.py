@@ -256,6 +256,8 @@ def log(args_for_test=None):
     pwd = os.getenv('PWD', '')
 
     if not sequence or not command:
+        if command == "":
+            exit()
         print(Term.WARNING + ('recent: cannot parse command output, please check your bash '
                               'trigger looks like this:') + Term.ENDC)
         exit("""export PROMPT_COMMAND='{}'""".format(EXPECTED_PROMPT))
