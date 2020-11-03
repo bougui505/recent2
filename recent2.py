@@ -525,7 +525,7 @@ def check_prompt(debug):
 
 
 def handle_recent_command(args, failure_exit_func):
-    check_prompt(args.debug)  # Fail the command if PROMPT_COMMAND is not set
+    # check_prompt(args.debug)  # Fail the command if PROMPT_COMMAND is not set
     conn = create_connection()
     # Install REGEXP sqlite UDF.
     conn.create_function("REGEXP", 2, regexp)
